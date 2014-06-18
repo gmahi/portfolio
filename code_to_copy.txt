@@ -1,0 +1,181 @@
+
+IE Fixes
+---------------------------		
+<html> CSS Hacks, Fixes for lt IE 9
+http://www.paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+---------------------------
+
+A. Fix <figure>/<img> issues.
+B. Fix Navigation issues.
+C. Fix box-sizing support issues.
+D. Fix Form elements in IE7 and below.
+
+HTML (Put immediately after doctype):
+
+<!--[if lt IE 9]><html class="ie"><![endif]-->
+<!--[if !IE]><html><![endif]-->
+
+
+CSS:
+
+/* ******************************************
+    IE 8 and below, legacy browser style fixes
+****************************************** */
+
+/* Figures/Images */
+
+.ie #portfolio figure {
+    width: 100%;
+    box-sizing: border-box;
+    }
+
+/* "*" hack applies only to IE7 and below */
+
+.ie #portfolio figure {
+    *width: auto;
+    }
+   
+/* Navigation */
+
+/* IE8 .checked class for checkbox.js */
+
+#nav input[type=checkbox].checked ~ nav {
+    height: auto;
+    overflow: visible;  
+}
+
+/* Always show nav, IE7 and below */
+
+.ie #nav nav {
+    *height: auto;
+    *overflow: visible;  
+}
+
+/* Hide navicon, IE7 and below */
+
+.ie #nav label { 
+    *background: none;
+    }
+     
+/* box-sizing polyfill, IE7 and below (The URL in .ie textarea is placeholder only. You will need to replace with path to your domain) */
+
+.ie .wrapper,
+.ie .name,
+.ie .email,
+.ie input,
+.ie textarea {
+    *behavior: url("http://www.absolute-path.com/js/boxsizing.htc");
+}
+
+---------------------------		
+IE Conditional Comments
+A. Checkbox Hack Support for IE8
+B. Attribute Selector Support for IE6
+---------------------------
+
+
+---------------------------
+ Checkbox Hack Support for IE8
+---------------------------
+
+<!--[if lt IE 9]>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
+<![endif]-->
+
+<!--[if IE 8]>
+<script src="./js/checkbox.js"></script>
+<![endif]-->
+
+---------------------------
+C. Attribute Selector Support for IE6
+---------------------------
+
+e.g.,
+
+#nav input[type=checkbox] {
+    position: absolute;
+    top: -999em;
+    left: -999em;
+}
+
+<!--[if IE 6]>
+<script src="./js/selectivizr-min.js"></script>
+<![endif]-->
+
+
+
+---------------------------
+Form Fixes
+---------------------------
+
+/* ******************************************
+    Media Queries for screen wider than 60em (960px)
+****************************************** */
+
+@media screen and (min-width: 60em) {
+    
+/* Form Fixes, IE7 and below */
+
+.ie .message textarea {
+    *width: 49.9%;
+    }
+
+.ie .send {
+    *margin-left: 46.7%;
+    }
+
+}
+
+
+
+
+
+---------------------------		
+Nav :hover 1px overlap issue in Chrome
+---------------------------	
+
+
+In @media screen and (min-width: 45em)
+
+From:
+
+#nav nav {
+    height: auto;
+    overflow: visible;
+}
+
+To:
+
+#nav nav {
+    height: auto;
+}
+
+Overflow: hidden hides the 1px overlap in Chrome.
+
+
+
+---------------------------
+Optimization
+---------------------------
+		
+<!--[if lt IE 9]>
+<script src="./js/html5.js"></script>
+<![endif]-->
+
+
+---------------------------		
+Background sizing (background-size) is unsupported in IE8 and below.
+---------------------------	
+
+Possible solutions:
+
+Polyfill (IE8)
+https://github.com/louisremi/background-size-polyfill
+
+Remove background images that need scaling/sizing or provide a properly scaled/sized image for IE8 and below.
+
+
+
+
+
+

@@ -1,0 +1,192 @@
+<!DOCTYPE HTML>
+<!--[if lt IE 9]><html class="ie"><![endif]-->
+<!--[if !IE]><html><![endif]-->
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Maya Chopra's portfolio</title>
+		
+		<!-- Viewport meta tag to prevent iPhone from scaling our page -->
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		
+		<link rel="stylesheet" href="./css/style.css"/>
+		
+		<!-- Normalize hide address bar for iOS and Android -->
+		<script src="./js/hideaddressbar.js"></script>
+		
+		<!-- Add media query support for IE8 and under. Must place media queries in external stylesheet -->
+		<script src="./js/respond.min.js"></script>
+		
+		<!-- Using picturefill to load conditional images and matchmedia to provide support for IE8 and below + older browsers -->
+		<script src="./js/picturefill.js"></script>
+		<script src="./js/matchmedia.js"></script>
+		
+		<!--[if lt IE 9]>
+			<script src="./js/html5.js"></script>
+		<![endif]-->
+			
+			<!--[if lt IE 9]>
+			<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
+			<![endif]-->
+
+			<!--[if IE 8]>
+			<script src="./js/checkbox.js"></script>
+			<![endif]-->
+			
+			<!--[if IE 6]>
+				<script src="./js/selectivizr-min.js"></script>
+			<![endif]-->
+			
+	</head>
+
+	<body lang="en">
+		<div id="container-nav">
+			<section id="nav" class="group wrapper">
+				<h3>Maya Chopra</h3>
+		        <!-- Checkbox Hack markup -->
+		        <input type="checkbox" id="toggle" />
+		        <label for="toggle" onclick>Menu</label>
+		        <!-- /Checkbox Hack markup -->
+		        <nav>
+		            <ul>
+		                <li><a href="#portfolio">Portfolio</a></li>
+		                <li><a href="#resume">Resume</a></li>
+		                <li><a href="./">LinkedIn Profile</a></li> <!-- No destination yet -->
+		                <li><a href="#contact">Contact</a></li>
+		            </ul>
+		        </nav>
+				
+			
+			</section>
+		</div>
+		<div id="container-header">
+			<header id="masthead" class="wrapper">
+				<figure id="maya"> 
+				    <div data-picture data-alt="Maya Chopra">
+				        <div data-src="img/headshot-s.png"></div>
+				        <div data-src="img/headshot-m.png" data-media="(min-width: 45em)"></div>
+				        <div data-src="img/headshot-l.png" data-media="(min-width: 60em)"></div>
+				        <!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+				        <noscript>
+				            <img src="img/headshot-s.png" alt="Maya Chopra">
+				        </noscript>
+				    </div>
+				</figure>
+				
+				<h1>Hi, I'm Maya</h1>
+
+				<h2>A Boston-based designer/developer hybrid with a passion for user experience and the web</h2>
+			</header>
+		</div>
+		<div id="container-content">
+			<article id="content">
+			
+				<section id="portfolio" class="group">
+				
+					<header class="wrapper">
+						<h3>My Portfolio</h3>
+						<p>Some of the things I've been working on lately</p>
+					</header>
+					<article class="group wrapper">
+					    <h4>Vitamin T Homepage</h4>
+					        <a href="/work/vitamin-t/">
+					            <figure>
+					                <img src="./img/vitamin-t.png" alt="vitamin t homepage">	
+					            </figure>
+					        </a>
+					</article>
+					
+				<article class="group wrapper">
+				<h4>RoboHead iPad App</h4>
+						<a href="/work/robohead/">
+							<figure>
+								<img src="./img/robohead.png" alt="Robohead iPad App">
+							</figure>
+						</a>
+				</article>
+				<article class="group wrapper">
+				<h4>Shareist Homepage</h4>
+						<a href="/work/shareist/">
+							<figure>
+								<img src="./img/shareist.png" alt="Shareist homepage">
+							</figure>
+						</a>
+				</article>
+				
+				</section>
+				
+				<section id="resume" class="group">
+			
+						<header class="wrapper">
+							<h3>My Resume</h3>
+							<p>Current/previous positions and skill set</p>
+						</header>
+					<article class="wrapper">	
+					<div class="box">
+						<h4>Currently</h4>
+
+						<h5>Designer/Developer</h5>
+
+						<h6>Self-employed</h6>
+
+						<p>Design and development for a two-person studio in Boston, MA. Clients include Boston Red Sox, Sam Adams and Aerosmith.</p>
+					</div>
+					</article>
+					<article class="wrapper">
+					<div class="box">
+						<h4>Previously</h4>
+
+						<h5>Lead UI Designer</h5>
+
+						<h6>Aquent University</h6>
+
+						<p>Lead designer and theme developer for AU's home-built CMS. Worked with several other groups at the university as well.</p>
+					</div>
+					</article>
+					<article class="wrapper">
+					<div class="box">
+						<h4>Skills</h4>
+
+						<ul>
+							<li>Photoshop, Fireworks and Illustrator</li>
+							<li>HTML5 &amp; CSS3</li>
+							<li>Responsive Web Design</li>
+							<li>Mobile App (Native and Web) Design</li>
+						</ul>
+					</div>
+					</article>
+						<footer class="wrapper">
+							<p>For a full work history, have a look at my LinkedIn Profile</p>
+						</footer>
+			
+				</section>
+		
+			</article>
+		</div>
+		<div id="container-footer">
+			<form id="contact">
+			    <fieldset class="wrapper">
+			        <legend>Contact</legend>
+			            <ul class="group">
+			                <li class="name">
+			                    <label for="name">Your Name</label>
+			                    <input type="text" id="name" name="name" />
+			                </li>
+			                <li class="email">
+			                    <label for="email">Your Email</label>
+			                    <input type="email" id="email" name="email" />
+			                </li>
+			                <li class="message">
+			                    <label for="message">Say Hello</label>
+			                    <textarea id="message" name="message"></textarea>
+			                </li>
+			            </ul>
+			        <input class="send" type="submit" name="submit" value="Send" />
+			    </fieldset>
+			</form>           
+			<footer id="colophon" class="wrapper">
+				<p>©2013 all rights reserved. </p>
+			</footer>
+		</div>	
+	</body>
+</html>
